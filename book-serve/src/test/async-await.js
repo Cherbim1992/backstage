@@ -8,7 +8,7 @@
 //     setTimeout(()=>{
         
 //         cb(arg+1);
-//         console.log(arg)
+//         console.log(arg) 
 //     },1000)
 //  }
 //  request(1,(res1)=>{
@@ -25,7 +25,7 @@
 const request = (arg,cb)=>{
     return new Promise((resolve,reject) => {
         setTimeout(()=>{
-            resolve(arg+1)
+            resolve(arg+1)  
             console.log(arg)
         },1000);
     })
