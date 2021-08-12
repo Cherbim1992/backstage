@@ -14,13 +14,22 @@ export default defineComponent({
       account: '',
       password: '',
     });
+    const loginForm = reactive({
+      account: '',
+      password: '',
+    });
     const register = () => {
       auth.register(regForm.account, regForm.password);
       console.log(regForm);
     };
+    const login = () => {
+      auth.login(loginForm.account, loginForm.password);
+    };
     return {
       regForm,
       register,
+      loginForm,
+      login,
     };
   },
 });

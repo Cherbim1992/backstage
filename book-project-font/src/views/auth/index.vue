@@ -12,14 +12,14 @@
       <a-tabs default-active-key="1">
         <a-tab-pane key="1" tab="登录">
           <div class="form-item">
-            <a-input placeholder="账户">
+            <a-input placeholder="账户" v-model:value="loginForm.account">
               <template #prefix>
                 <UserOutlined style="color:#ccc" />
               </template>
             </a-input>
           </div>
           <div class="form-item">
-            <a-input placeholder="密码">
+            <a-input placeholder="密码" v-model:value="loginForm.password">
               <template #prefix>
                 <LockOutlined style="color:#ccc" />
               </template>
@@ -29,7 +29,7 @@
             <a href="">忘记密码</a>
           </div>
           <div class="form-item">
-            <a-button type="primary">登录</a-button>
+            <a-button type="primary" @click="login">登录</a-button>
           </div>
         </a-tab-pane>
         <a-tab-pane key="2" tab="注册" force-render>
