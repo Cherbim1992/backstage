@@ -48,7 +48,7 @@
             </a-input>
           </div>
           <div class="form-item">
-            <a-input placeholder="邀请码">
+            <a-input v-model:value="regForm.inviteCode" placeholder="邀请码">
               <template #prefix>
                 <LaptopOutlined style="color:#ccc" />
               </template>
